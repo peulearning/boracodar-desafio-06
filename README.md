@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Este projeto faz parte de uma séries de desafios proposto pela [Rocketseat!](https://rocketseat.com.br) com o intuito de ajudar a criar um portfólio completo, e ainda impulsionar a praticar programação toda semana.
 
-- [Acesse o projeto finalizado, online]()
+- [Acesse o projeto finalizado, online](https://peulearning.github.io/boracodar-desafio-06/)
 
 ## 🔖 Layout
 
