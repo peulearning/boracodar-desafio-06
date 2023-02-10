@@ -1,0 +1,323 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  letter-spacing: -0.02em;
+  /* valor padrão do rem 10px */
+
+}
+
+:root {
+  /* neutrals colors */
+  --neutral-black: rgba(0, 0, 0, 0.64);
+  --neutral-black-strong: rgba(0, 0, 0, 0.88);
+  --neutral-white: #fff;
+  /* components element color */
+  --background-color: linear-gradient(167.96deg, #8257E5 0%, #271A45 100%);
+  --primary-color: #633BBC;
+  /* padding */
+  --padding: 24px 32px;
+  --gap: 24px;
+}
+
+/* style */
+body,
+main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  place-items: center;
+  justify-content: center;
+  background: var(--background-color);
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+input {
+  display: none;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: white;
+  padding: 2px 10px;
+  font-size: 1rem;
+}
+
+#ticket {
+  width: 327px;
+  animation: first 2s ease-in forwards;
+}
+@keyframes first {
+  from{
+     opacity: 0;
+     scale: .8;
+  }
+  to{
+     opacity: 1;
+     scale: 1;
+  }
+}
+.primarySection,
+.secondarySection,
+.tertiarySection {
+  width: 100%;
+  padding: var(--padding);
+  background: var(--neutral-white);
+  border-radius: 24px;
+}
+
+h2.strong {
+  font-size: 4rem;
+  line-height: 4.7rem;
+}
+
+.strong {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: var(--neutral-black-strong);
+}
+
+.primary {
+  padding: 4px 8px;
+  background: var(--primary-color);
+  border-radius: 8px;
+
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: var(--neutral-white);
+  text-align: center;
+}
+
+.ligth {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: var(--neutral-black);
+}
+
+h1 {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-align: center;
+  color: var(--neutral-white);
+  margin-bottom: 1rem;
+}
+
+h4.ligth {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.62);
+  margin-top: 2rem;
+}
+
+/* style component */
+.primarySection {
+  display: grid;
+  gap: var(--gap);
+}
+
+.primarySection .detailsTicket {
+  display: flex;
+  justify-content: space-between;
+}
+
+.primarySection .detailsTicket .date {
+  text-align: right;
+}
+
+.primarySection .infoAirplane {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.primarySection .infoAirplane img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.primarySection .infoAirplane .content:nth-child(2) h2,
+.primarySection .infoAirplane .content:nth-child(2) p {
+  text-align: right;
+  position: relative;
+}
+
+#GMT {
+  position: absolute;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.8);
+  top: -5px;
+}
+
+/* secondary section */
+
+.secondarySection {
+  border-top: 1px dotted rgba(0, 0, 0, 0.32);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.32);
+}
+
+.secondarySection .peopleInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.secondarySection .peopleInfo .infos:last-child {
+  text-align: right;
+}
+
+.secondarySection .border {
+  display: none;
+}
+
+/* tertiary section */
+
+.tertiarySection {
+  display: grid;
+  gap: 24px;
+}
+
+.tertiarySection .boardingInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tertiarySection .boardingInfo .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 16px;
+}
+
+.tertiarySection .boardingInfo .content:last-child {
+  gap: 0;
+  text-align: center;
+}
+
+.tertiarySection .boardingInfo .content img {
+  width: 160px;
+}
+
+.tertiarySection .reminder {
+  text-align: center;
+}
+
+/* outro modelo */
+
+label.primary {
+  background: var(--neutral-white);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+input:checked~label.primary {
+  background: var(--neutral-black);
+  color: var(--neutral-white);
+}
+input:checked ~ #ticket{
+  animation: fade-in 2s ease-in forwards;
+}
+
+@keyframes fade-in {
+  from{
+    opacity: 0;
+    scale: .8;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+input:checked~#ticket .primarySection {
+  border-radius: 24px 24px 0 0;
+  z-index: 0;
+  background: #fff;
+  background: linear-gradient(135deg, transparent 10px, #fff 0) top left,
+    linear-gradient(225deg, transparent 10px, #fff 0) top right,
+    linear-gradient(315deg, transparent 10px, #fff 0) bottom right,
+    linear-gradient(45deg, transparent 10px, #fff 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+
+  background-image: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 0, #fff 0),
+    radial-gradient(circle at 100% 0, rgba(0, 0, 0, 0) 0, #fff 0),
+    radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0) 14px, #fff 15px),
+    radial-gradient(circle at 0 100%, rgba(0, 0, 0, 0) 14px, #fff 15px);
+}
+
+input:checked~#ticket .secondarySection {
+  border-radius: 0;
+  position: relative;
+  background: #fff;
+  background: linear-gradient(135deg, transparent 10px, #fff 0) top left,
+    linear-gradient(225deg, transparent 10px, #fff 0) top right,
+    linear-gradient(315deg, transparent 10px, #fff 0) bottom right,
+    linear-gradient(45deg, transparent 10px, #fff 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+
+  background-image: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 14px, #fff 15px),
+    radial-gradient(circle at 100% 0, rgba(0, 0, 0, 0) 14px, #fff 15px),
+    radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0) 14px, #fff 15px),
+    radial-gradient(circle at 0 100%, rgba(0, 0, 0, 0) 14px, #fff 15px);
+}
+
+input:checked~#ticket .tertiarySection {
+  border-radius: 0 0 24px 24px;
+
+  background: #fff;
+  background: linear-gradient(135deg, transparent 10px, #fff 0) top left,
+    linear-gradient(225deg, transparent 10px, #fff 0) top right,
+    linear-gradient(315deg, transparent 10px, #fff 0) bottom right,
+    linear-gradient(45deg, transparent 10px, #fff 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+
+  background-image: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 14px, #fff 15px),
+    radial-gradient(circle at 100% 0, rgba(0, 0, 0, 0) 14px, #fff 15px),
+    radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0) 0, #fff 0),
+    radial-gradient(circle at 0 100%, rgba(0, 0, 0, 0) 0, #fff 0);
+}
+
+
+/* Media Querie */
+
+@media (max-width: 280px) {
+  #ticket {
+    transform: scale(.6);
+  }
+}
+
+@media (max-width:454px) {
+  label.primary {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+  }
+}
+
+@media (max-height:600px) {
+  #ticket {
+    transform: scale(.6);
+  }
+}

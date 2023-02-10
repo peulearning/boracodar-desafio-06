@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Bora Code 06 | Cartão de Embarque</title>
+  </head>
+  <body>
+    <main>
+      <input type="checkbox" name="firstModel" id="firstModel" />
+      <label for="firstModel" class="primary">Modelo 2</label>
+      <section id="ticket">
+        <h1>Cartão de embarque | 06</h1>
+        <div class="primarySection">
+          <div class="detailsTicket">
+           <div class="price">
+            <p class="ligth">Voo</p>
+            <p class="strong">RS995</p>
+           </div>
+           <div class="date">
+            <p class="ligth">Data</p>
+            <p class="strong">23/05/2023</p>
+           </div>
+          </div>
+          <div class="infoAirplane">
+              <div class="content">
+                <p class="ligth">São Paulo, Brasil</p>
+                <h2 class="strong">GRU</h2>
+                <p class="strong">17:00</p>
+              </div>
+              <div class="content">
+                <p class="ligth">São Fransisco, EUA</p>
+                <h2 class="strong">SFO</h2>
+                <p class="strong">04:48<span id="GMT">+1</span></p>
+              </div>
+              <img src="assets/img/airplane.svg" alt="">
+          </div>
+        </div>
+        <div class="secondarySection">
+          <div class="peopleInfo">
+            <div class="infos">
+              <p class="ligth">Passageiro</p>
+              <p class="strong">Rodrigo Terron</p>
+            </div>
+            <div class="infos">
+              <p class="ligth">Assento</p>
+              <p class="strong">28A</p>
+            </div>
+            <span class="border"></span>
+            <span class="border"></span>
+            <span class="border"></span>
+            <span class="border"></span>
+          </div>
+        </div>
+        <div class="tertiarySection">
+          <div class="boardingInfo">
+             <div class="content">
+              <div class="boarding">
+                <p class="ligth">Embarque</p>
+                <p class="primary">16:15</p>
+              </div>
+              <div class="terminal">
+                <p class="ligth">Terminal</p>
+                <p class="strong">2</p>
+              </div>
+              <div class="gate">
+                <p class="ligth">Portão</p>
+                <p class="strong">15</p>
+              </div>
+             </div>
+             <div class="content">
+              <img src="assets/img/QR Code.png" alt="QR Code">
+              <p class="ligth">Grupo de embarque: 3</p>
+             </div>
+          </div>
+          <div class="reminder">
+           <p class="ligth"><span class="strong">Atenção: </span> o portão fecha 16:45</p>
+          </div>
+        </div>
+        <h4 class="ligth">Qualquer problema procure o balcão de <br>  da sua companhia aérea</h4>
+      </section>
+      
+    </main>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
